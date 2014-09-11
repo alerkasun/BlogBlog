@@ -1,5 +1,5 @@
-<h1>Welcome to my BlogBlog</h1>
 
+<h1>Welcome to my BlogBlog</h1>
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post %> </h2>
   <p>
@@ -9,7 +9,8 @@
     <%= truncate post.text %>
   </p>
 <% end %>
-
 <p>
-<%= link_to "New post", new_post_path %>
+
+<%= link_to "<button>New post</button>".html_safe, new_post_path, :id=>"open-contacts-dialog-btn" %>
 </p>
+
