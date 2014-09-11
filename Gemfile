@@ -28,6 +28,7 @@ gem 'spring',        group: :development
 gem 'jekyll-auth'
 gem 'faker'
 gem 'factory_girl'
+gem 'rolify'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

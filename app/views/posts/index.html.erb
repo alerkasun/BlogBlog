@@ -3,10 +3,15 @@
 <% @posts.each do |post| %>
   <h2><%= link_to post.title, post %> </h2>
   <p>
-    <%= time_ago_in_words(post.created_at) %> ago
-  </p>
-  <p>
     <%= truncate post.text %>
+  </p>
+
+  <p>
+Вывести 3 коммента для одного поста
+  </p>
+
+  <p>
+    <%= time_ago_in_words(post.created_at) %> ago
   </p>
 <% end %>
 <p>
