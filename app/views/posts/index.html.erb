@@ -1,21 +1,23 @@
+<div class='row'>
+  <h1>Welcome to my BlogBlog</h1>
+  <% @posts.each do |post| %>
+    <div class='col-lg-6'>
+      <h2><%= link_to post.title, post %> </h2>
+      <p>
+        <%= truncate post.text %>
+      </p>
 
-<h1>Welcome to my BlogBlog</h1>
-<% @posts.each do |post| %>
-  <h2><%= link_to post.title, post %> </h2>
-  <p>
-    <%= truncate post.text %>
-  </p>
+      <div class='well'>
+    Вывести 3 коммента для одного поста
+      </div>
 
-  <p>
-Вывести 3 коммента для одного поста
-  </p>
-
-  <p>
-    <%= time_ago_in_words(post.created_at) %> ago
-  </p>
-<% end %>
-<p>
-
-<%= link_to "<button>New post</button>".html_safe, new_post_path, :id=>"open-contacts-dialog-btn" %>
-</p>
-
+      <p>
+        <%= time_ago_in_words(post.created_at) %> ago
+      </p>
+    </div>
+    <hl>
+  <% end %>
+</div>
+<div class='row'>
+  <%= link_to "New post", new_post_path, class: [:btn, 'btn-info', 'pull-right'] %>
+</div>
